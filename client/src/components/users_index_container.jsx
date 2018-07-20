@@ -3,7 +3,7 @@ import UsersIndex from './users_index.jsx'
 import { fetchUsers } from '../actions/user_actions'
 
 const mapStateToProps = state => ({
-  users: {name: "alex", password: "password"}
+  users: Object.keys(state.users).map(id => state.users[id])
 });
 
 const mapDispatchToProps = dispatch => ({
